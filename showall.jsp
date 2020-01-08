@@ -24,7 +24,7 @@ for(Product p:products){
 	out.println("<tr><td>"+p.getProductId()+"</td>");
 	out.println("<td>"+p.getProductName()+"</td>");
 	out.println("<td>"+p.getPrice()+"</td>");
-	out.println("<td><a href=delete?pid="+p.getProductId()+"Delete></a></td></tr>");
+	out.println("<td><a href=delete?pid="+p.getProductId()+">Delete</a></td></tr>");
 }
 %>
 </table>
