@@ -18,12 +18,16 @@ List<Product> products=(List<Product>)session.getAttribute("products");
 <th>Prod Id</th>
 <th>Prod Name</th>
 <th>Prod Price</th>
+<th>Update</th>
+<th>Delete</th>
+
 </tr>
 <%
 for(Product p:products){
 	out.println("<tr><td>"+p.getProductId()+"</td>");
 	out.println("<td>"+p.getProductName()+"</td>");
 	out.println("<td>"+p.getPrice()+"</td>");
+	out.println("<td><a href=update?pid="+p.getProductId()+">Update</a></td>");
 	out.println("<td><a href=delete?pid="+p.getProductId()+">Delete</a></td></tr>");
 }
 %>
